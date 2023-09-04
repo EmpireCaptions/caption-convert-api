@@ -22,7 +22,7 @@ from fastapi import FastAPI, UploadFile, Form, HTTPException, Request
 app = FastAPI()
 
 ALLOWED_EXTENSIONS = {'srt', 'dfxp', 'sami', 'vtt', 'scc'}
-ALLOWED_IPS = {"123.45.67.89", "98.76.54.32", "127.0.0.1"}  # Add your app's IP addresses and localhost for testing
+ALLOWED_IPS = {"123.45.67.89", "98.76.54.32", "75.183.118.168"}  # Add your app's IP addresses and localhost for testing
 
 def allowed_file(filename: str) -> bool:
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
